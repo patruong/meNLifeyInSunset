@@ -1,24 +1,42 @@
-title: Multiverse by HTML5 UP
-author: João Neto
-email: joao@neto.pt
-description: >-
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+## Site Meta ##
+# The title of the website.
+title: "Lens - Elastic Designs"
+# The description of the website
+description: "A Jekyll theme for photographers and photo bloggers."
+# Keywords/tags for you site.
+keywords: "lens, jeykll-lens, jekyll, theme, jekyll-theme, photography, blog, photography-blog, photo-blog"
+# Your copyright message.
+copyright: "Copyright &copy; 2017 - Elastic Designs."
 
+## Site Configurations ##
+# 1st heading of the site.
+header: "Lens"
+# 2nd heading/sub heading of the website.
+subheader: "Elastic Designs"
+# A description/bio of the website.
+bio: "A Jekyll theme for photographers and photo bloggers."
 social:
-  twitter: joaomlneto
-  facebook: joaomlneto
-  instagram: joaomlneto
-  github: joaomlneto
-  linkedin:
+  # Your Twitter username.
+  twitter_username: ""
+  # Your Facebook username.
+  facebook_username: ""
+  # Your Instagram username.
+  instagram_username: ""
+  # GitHub username.
+  github_username: "ElasticDesigns"
+  # Your email address.
+  email: ""
 
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+## Gallery Configuration ##
+# If you modify this, also modify the `default.scope.path` key below.
+gallery_dir: "gallery"
+# Any valid value of "background-position" CSS attribute.
+image_position: "left center"
 
-collections:
-  images:
-    output: true
+## Jekyll Configuration ##
+defaults:
+ - scope:
+    # Should be same as the `gallery_dir` key above.
+    path: "gallery"
+   values:
+    image: true

@@ -59,6 +59,8 @@ def remove_index_from_gallery(df):
 
 remove_index_from_gallery(df)
 
+# ADD FILES AND THEN CONTINUE
+
 
 df = pd.read_csv("file_list_to_sort.csv")
 
@@ -75,12 +77,13 @@ def remove_white_space_from_text(df):
 
 df = remove_white_space_from_text(df)
 
+# GO TO GALLERY TO REMOVE "_"
 
 # Replace _ with white space and rename in folder (DONT USE)
-#for i in os.listdir():
-#    if "_" in i:
-#        new_str = i.replace("_", " ")
-#        os.rename(i, new_str)
+for i in os.listdir():
+    if "_" in i:
+        new_str = i.replace("_", " ")
+        os.rename(i, new_str)
         
 # Replace ? with "" and rename file (DONT USE)
 #for i in os.listdir():

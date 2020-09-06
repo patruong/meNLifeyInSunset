@@ -39,7 +39,10 @@ df = pd.read_csv("sorted_file_list.csv")
 def dump_list_to_sort(df):
     df.drop("indexer",axis=1).to_csv("file_list_to_sort.csv", sep =",", index = False)
 
-dump_list_to_sort(df)
+# WARNING USE WHEN NOT EDITED
+#dump_list_to_sort(df) # This file is to be edited #use when not edited
+
+
 #generate_list_to_sort() #in scripts to get sorted list without index
 #df2 = pd.read_csv("file_list_to_sort.csv")
 
@@ -105,15 +108,16 @@ def index_file_list(df):
     while True:
         try:
             iterator += 1
+            iter_letter = string.ascii_lowercase[iterator]
             for i in string.ascii_lowercase:
-                print(str(iterator) + i)
+                #print(str(iter_letter) + i)
                 file_name_raw = list(file_list.pop())
                 old_file_name = ".".join([" ".join(file_name_raw[:-1])] + [file_name_raw[-1]])
                 file_name = "_".join(["_".join(file_name_raw[0].split(" "))] + [".".join(file_name_raw[1:])])
-                new_file_name = "_".join([str(iterator) + i] + [file_name])
+                new_file_name = "_".join([str(iter_letter) + i] + [file_name])
                 try:
                     os.rename(old_file_name, new_file_name)
-                    #print("renamed: " + old_file_name + "->", new_file_name)
+                    print("renamed: " + old_file_name + "->", new_file_name)
                 except:
                     print("WARNING BROKE AT " + old_file_name + " -> " + new_file_name)
                     print(i)
